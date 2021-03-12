@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./assets/css/styles.css"
+      media="screen, projection"
+    />
+    <script src="./assets/iconify.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <main id="container" class="fade" aria-label="Container">
+      <section id="header" aria-label="Header">
+        <h1 id="header-time" aria-label="Time">00:00</h1>
+        <h2 id="header-date" aria-label="Date">Date</h2>
+      </section>
+      <br />
+      <br />
+      <div id="searchBox" aria-label="Search Box">
+        <input
+          id="searchbar"
+          autocomplete="off"
+          type="text"
+          title="Search"
+          autofocus
+          onkeydown="search(event)"
+          placeholder="Search..."
+          aria-label="Search input"
+        />
+      </div>
+      <br />
+      <section id="apps" aria-label="Favorites Section">
+        <div id="apps-container" aria-label="Favorites Container">
+          </a>
+          <a
+            class="apps-item"
+            style="--bg-hover: #fe8019"
+            href="https://www.reddit.com/"
+            aria-label="Reddit"
+          >
+            <div class="apps-icon">
+              <span class="iconify icon" data-icon="mdi:reddit"></span>
+            </div>
+            <div class="apps-text">
+              <span>Reddit</span>
+              <span>reddit.com</span>
+            </div>
+          </a>
+          <a
+            class="apps-item"
+            style="--bg-hover: #fb4934"
+            href="https://www.youtube.com/"
+            aria-label="Youtube"
+          >
+            <div class="apps-icon">
+              <span class="iconify icon" data-icon="mdi-youtube"></span>
+            </div>
+            <div class="apps-text">
+              <span>Youtube</span>
+              <span>Youtube.com</span>
+            </div>
+          </a>
+          <a
+            class="apps-item"
+            style="--bg-hover: #0a66c2"
+            href="https://www.linkedin.com/feed/"
+            aria-label="LinkedIn"
+          >
+            <div class="apps-icon">
+              <span
+                class="iconify icon"
+                data-icon="ant-design:linkedin-filled"
+              ></span>
+            </div>
+            <div class="apps-text">
+              <span>LinkedIn</span>
+              <span>linkedin.com</span>
+            </div>
+          </a>
+          <button
+            class="pass-item"
+            style="--bg-hover: #689d6a"
+            aria-label="Generate Password"
+            onclick="copyPassword()"
+          >
+            <div class="apps-icon">
+              <span class="iconify icon" data-icon="bi:shield-lock"></span>
+            </div>
+            <div class="pass-text">
+              <span id="pass-span">Generate Password</span>
+              <input
+                class="passwordField"
+                id="generated-password"
+                value = "" 
+                type="text" 
+                readonly={true}/>
+            </div>
+          </button>
+        
+          <a
+            class="apps-item"
+            style="--bg-hover: #a89984"
+            href="https://github.com/"
+            aria-label="Github"
+          >
+            <div class="apps-icon">
+              <span class="iconify icon" data-icon="mdi-github"></span>
+            </div>
+            <div class="apps-text">
+              <span>Github</span>
+              <span>github.com</span>
+            </div>
+          </a>
+          <a
+            class="apps-item"
+            style="--bg-hover: #2978ad"
+            href="http://chiraba.com"
+          >
+            <div class="apps-icon">
+              <span class="iconify icon" data-icon="zmdi:outlook"></span>
+            </div>
+            <div class="apps-text">
+              <span>Chiraba</span>
+              <span>Chiraba.com</span>
+            </div>
+          </a>
+          <a
+            class="apps-item"
+            style="--bg-hover: #2978ad"
+            href="http://Aaron.Brvenik.com"
+            aria-label="My Portfolio"
+          >
+            <div class="apps-icon">
+              <span class="iconify icon" data-icon="cib:mail-ru"></span>
+            </div>
+            <div class="apps-text">
+              <span>Portfolio</span>
+              <span>Aaron.Brvenik.com</span>
+            </div>
+          </a>
+          <a
+            class="apps-item"
+            style="--bg-hover: #a89984"
+            href="https://mail.google.com/mail/u/0/"
+            aria-label="Gmail"
+          >
+            <div class="apps-icon">
+              <span class="iconify icon" data-icon="mdi-google"></span>
+            </div>
+            <div class="apps-text">
+              <span>Gmail</span>
+              <span>gmail.com</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/startPage.js" type="text/javascript"></script>
+  </body>
+</html>
