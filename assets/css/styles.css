@@ -22,8 +22,7 @@ html {
   color: var(--color-primary);
   background: var(--bg-primary);
   background-size: 100vw;
-  background-image: url("../../4kEarth.jpg");
-  background-repeat: no-repeat;
+  background: url(../../4kEarth.jpg) no-repeat center center fixed;
 }
 
 body {
@@ -67,9 +66,8 @@ h3 {
 
 #apps-container {
   display: grid;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 #apps-container a {
@@ -162,7 +160,8 @@ h3 {
 
 #searchBox {
   margin: 0 auto;
-  width: 400px;
+  min-width: 50px;
+  max-width: 400px;
   height: 32px;
   border-radius: var(--rounded);
   background-color: var(--bg-primary);
