@@ -20,19 +20,22 @@
 
 html {
   color: var(--color-primary);
-  background: var(--bg-primary);
-  background-size: 100vw;
   background: url(../../4kEarth.jpg) no-repeat center center fixed;
+  height: 100vh;
+  width: auto;
 }
 
 body {
   margin: 0 auto;
   padding: 0;
+  height: inherit;
+  width: inherit;
 }
 
 #container {
   margin: 1em auto 0;
   width: 70%;
+  height: inherit;
 }
 
 h1,
@@ -40,6 +43,7 @@ h2 {
   font-weight: 300;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 h3,
@@ -50,8 +54,9 @@ h4 {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 700;
+  color: white;
 }
 
 h3 {
