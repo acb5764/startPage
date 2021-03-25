@@ -20,8 +20,7 @@
 
 html {
   color: var(--color-primary);
-  background: url(../../4kEarth.jpg) no-repeat center center fixed;
-  height: 100vh;
+  background: url(../../background.jpg) no-repeat center center fixed;
   width: auto;
 }
 
