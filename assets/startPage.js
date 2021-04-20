@@ -9,25 +9,35 @@ function search(event) {
 }
 
 function GeneratePassword() {
-  let prepend = "";
-  for (let i = 0; i < 15; i++) {
-    prepend = `${prepend}${String.fromCharCode(
-      Math.floor(Math.random() * 93 + 33)
-    )}`;
-  }
-  document.getElementById("generated-password").value = `${prepend}`;
-  document.getElementById("pass-span").innerHTML = "Copied!";
+  let result = "";
+  // let conditions = [0, 0, 0, 0, 0]; //test for number, CAPITAL, lower, & symbol.
 
-  return prepend;
+  for (let i = 0; i < Math.floor(Math.random() * 19 + 15); i++) {
+    result = `${result}${String.fromCharCode(getRandomChar())}`;
+  }
+
+  document.getElementById("generated-password").value = `${result}`;
+  document.getElementById("pass-span").innerHTML = "Copied!";
 }
 
-function copyPassword(password) {
+function getRandomChar() {
+  //Math.random is insecure, so we use window.crypto
+  let result = new Uint8Array(1);
+  let theChar = 0;
+  if (window.crypto && window.crypto.getRandomValues) {
+    do {
+      theChar = window.crypto.getRandomValues(result);
+    } while (theChar[0] < 33 || theChar[0] > 126);
+  } else return "not supported in IE"; //get a better browser bro
+  return result;
+}
+
+function copyPassword() {
   GeneratePassword();
   var copyText = document.getElementById("generated-password");
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  // toast.success(`Copied ${password} to Clipboard`);
 }
 
 function startTime() {
