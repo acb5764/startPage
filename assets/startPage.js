@@ -41,14 +41,20 @@ function copyPassword() {
 }
 
 function startTime() {
+  var countDownDate = new Date("June 30, 2024 00:00:00").getTime();
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  countDownTime = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  document.getElementById("header-time").innerHTML = countDownTime;
   const currentDate = new Date();
   usaTime = currentDate.toLocaleString("en-US", {
     timeZone: "America/New_York",
   });
 
-  document.getElementById("header-time").innerHTML = `${
-    usaTime.split(" ")[1]
-  } ${usaTime.split(" ")[2]}`;
   document.getElementById("header-date").innerHTML = usaTime.split(",")[0];
   setTimeout(startTime, 1000);
 }
