@@ -41,7 +41,7 @@ function copyPassword() {
 }
 
 function startTime() {
-  var countDownDate = new Date("June 30, 2024 00:00:00").getTime();
+  var countDownDate = new Date("June 1, 2026 00:00:00").getTime();
   var now = new Date().getTime();
   var distance = countDownDate - now;
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
